@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .heading {
+    margin: 4px;
+  }
+  
+  .subHeading {
+    margin: 4px;
+  }
+  
+  .MuiDataGrid-cell{
+    border:1px solid black !important;
+  }
+  
+  .MuiDataGrid-columnHeaders{
+    border:1px solid black !important;
+  }
+  .flex{
+    display: flex;
+  }
+  .flexCenter {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backgroundYellowGreen{
+    background-color: yellowgreen;
+  }
+  
+  .backgroundYellow{
+    background-color: rgb(234, 234, 25);
+  }
+  
+  .pageMiddleHeading {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .mt-8{
+    margin-top: 8px;
+  }
+  
+  .mt-20{
+    margin-top: 20px;
+  }
+  
+  .spin4_heading_grey {
+    background-color: lightgray;
+    border: 2px solid black;
+    font-style: italic
+  }
+  
+  .spin4_heading {
+    border: 2px solid ;
+  }
+  
+  
+  .bg_green,.bg_green:hover {
+    background-color:yellowgreen !important;
+    /* border:2px solid black; */
+    /* font-style: bold;
+    font-size: large; */
+  }
+  
+  .bg_green_header {
+    background-color:yellowgreen;
+    /* border:2px solid black; */
+    font-style: bold;
+    font-size: large;
+  }
+  
+  
+  .bg_gray {
+    border:2px solid black;
+    font-style: bold;
+    font-size: large;
+    color:black;
+  }
+  
+  .bg_darkGray,.bg_darkGray:hover {
+    background-color:gray !important;
+    color:black;
+  }
+  
+  .bg_lightGray{
+    background-color: rgb(167, 167, 167);
+  }
+  
+  .bg_dark {
+    background-color: rgb(96, 96, 96);
+  }
+  
+  .blackAndWhite{
+    background-color: black;
+    color: white;
+  }
+  .blue{
+    background-color: darkblue;
+    color: darkblue;
+  }
+  
+  .blueAndWhite, .blueAndWhite:hover{
+    background-color: darkblue !important;
+    color: white !important;
+  }
+  
+  .mediumFontSize{
+    font-size: 18px;
+    font-style: bold;
+  }
+  
+  .bigFontSize{
+    font-size: 28px;
+    font-style: bold;
+  }
+  
+  .peach{
+    background-color: peachpuff;
+    color:black;
+  }
+  
+  .border {
+    border: 2px solid black;
+  }
+  
+  .noBorder {
+    border:none !important;
+  }
+  
+  .borderTop{
+    border-top:2px solid black !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-left: none !important;
+  }
+  
+  .disableAutoHeight{
+    height: 500px;
+  }
+  
+  .MuiDataGrid-virtualScroller::-webkit-scrollbar {
+    width: 0px;
+    display:none;
+  }
+  
+  .borderRight {
+    border-right: 2px solid white;
+  }
+  
+  .flexColumn{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mt-100{
+    margin-top:100px;
+  }
+  
+  .verticalAlign {
+    align-items: center;
+  }
+  
+  .textBold {
+    font-weight: bold;
+  }
+  
+  .textAlignCenter {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .container{
+    max-width: 100vw;
+    overflow-x: scroll;
+  }
+  
+  .highlightedBox {
+    border-radius : 10px;
+    background-color: #F28500;
+    font-weight: bold;
+  }
+  
+  .chartContainer{
+    width:60%
+  }
+  
+  .justifyEnd{
+    justify-content: end;
+  }
+  

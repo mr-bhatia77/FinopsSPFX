@@ -16,11 +16,12 @@ import { IDataGridTableProps } from "./IDataGridTableProps";
 
 const DataGridTable: FunctionComponent<IDataGridTableProps> = (props) => {
   return (
-    <div style={{ height: "70vh", width: "100%" }}>
+    <div style={{ height: "70vh"}}>
       <DataGrid rows={props.rows} columns={props.columns}
       scrollbarSize={0} 
       hideFooter={true}
-      rowsPerPageOptions={[]}/>
+      rowsPerPageOptions={[]}
+      style={{ border: '1px solid black' }}/>
       
     </div>
   );

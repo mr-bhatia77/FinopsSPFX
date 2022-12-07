@@ -1,5 +1,6 @@
 import * as React from "react";
 // import styles from "./Finops.module.scss";
+import './Finops.css';
 import { IFinopsProps } from "./IFinopsProps";
 import { escape } from "@microsoft/sp-lodash-subset";
 import TotalConsolidated from "../pages/TotalConsolidated";
@@ -19,7 +20,6 @@ export default class Finops extends React.Component<IFinopsProps, {}> {
       <div>
         <h2>Well done, {escape(userDisplayName)}!</h2>
           
-          Hello
           <TotalConsolidated></TotalConsolidated>
         </div>
     );
