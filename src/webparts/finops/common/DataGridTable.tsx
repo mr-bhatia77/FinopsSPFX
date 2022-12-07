@@ -15,13 +15,18 @@ import { IDataGridTableProps } from "./IDataGridTableProps";
 // ];
 
 const DataGridTable: FunctionComponent<IDataGridTableProps> = (props) => {
+
+    const {rows,columns,handleGetRowClassName} = props;
+
   return (
     <div style={{ height: "70vh"}}>
-      <DataGrid rows={props.rows} columns={props.columns}
+      <DataGrid rows={rows} columns={columns}
       scrollbarSize={0} 
       hideFooter={true}
       rowsPerPageOptions={[]}
-      style={{ border: '1px solid black' }}/>
+      getRowClassName={(params) => handleGetRowClassName(params)}
+      style={{ border: '1px solid black' }}
+      />
       
     </div>
   );

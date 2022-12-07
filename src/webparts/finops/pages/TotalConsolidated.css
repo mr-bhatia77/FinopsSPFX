@@ -1,3 +1,16 @@
-.flex{
-    display: flex;
-  }
+.Black,.Black:hover {
+    background-color: black !important;
+    color:white !important;
+}
+
+.Green,.Green:hover {
+    background-color:  lightgreen !important;
+}
+
+.Yellow,.Yellow:hover {
+    background-color:  rgb(255, 255, 116) !important;
+}
+
+.fixedHeightTable {
+    height:700px;
+}
