@@ -18,7 +18,7 @@ export default class Finops extends React.Component<IFinopsProps, {}> {
 
     return (
       <div>
-        <h2>Well done, {escape(userDisplayName)}!</h2>
+        <h2>User Name ==  {escape(userDisplayName)}</h2>
           
           <TotalConsolidated></TotalConsolidated>
         </div>

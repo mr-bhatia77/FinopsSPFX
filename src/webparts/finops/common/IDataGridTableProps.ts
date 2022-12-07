@@ -4,5 +4,6 @@ export interface IDataGridTableProps {
     rows:GridRowsProp;
     columns:GridColDef[];
     handleGetRowClassName?(params:any):string
+    page:string
   }
   

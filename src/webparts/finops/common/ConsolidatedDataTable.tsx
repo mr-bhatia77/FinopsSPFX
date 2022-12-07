@@ -174,10 +174,20 @@ const consolidatedColumns: GridColDef[] = [
   ];
 
 const ConsolidatedDataTable = () => {
+
+    const getAbsValue =(type:any)=>{
+        const newType={...type}
+        for(let i in newType) {
+            if( i!== 'type' && i!=='color')
+            newType[i] = Math.abs(newType[i])
+        }
+        return(newType)
+    }
+
     const getRows = () => {
         const newRows: any = [];
         consolidatedStructure.conBudgetListEntity.forEach((type: any) => {
-          newRows.push(type);
+            newRows.push(getAbsValue(type));
         });
         return newRows;
       };
@@ -191,8 +201,9 @@ const ConsolidatedDataTable = () => {
             columns={consolidatedColumns}
             rows={getRows()}
             handleGetRowClassName={handleGetRowClassName}
+            page={'consolidated'}
           ></DataGridTable>
   )
 }
 
-export default ConsolidatedDataTable
+export default ConsolidatedDataTable;
