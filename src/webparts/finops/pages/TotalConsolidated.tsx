@@ -4,6 +4,7 @@ import "./TotalConsolidated.css";
 import ConsolidatedDataTable from "../common/ConsolidatedDataTable";
 
 const TotalConsolidated: FunctionComponent = () => {
+    
   return (
     <div>
       <div className="container">

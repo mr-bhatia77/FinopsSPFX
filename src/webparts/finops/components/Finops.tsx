@@ -1,10 +1,12 @@
 import * as React from "react";
 // import styles from "./Finops.module.scss";
-import './Finops.css';
+import "./Finops.css";
 import { IFinopsProps } from "./IFinopsProps";
-import { escape } from "@microsoft/sp-lodash-subset";
-import TotalConsolidated from "../pages/TotalConsolidated";
-
+import { Provider } from "react-redux";
+import store from "../redux/store";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+// import Navbar from "../pages/Navbar";
 
 export default class Finops extends React.Component<IFinopsProps, {}> {
   public render(): React.ReactElement<IFinopsProps> {
@@ -17,11 +19,11 @@ export default class Finops extends React.Component<IFinopsProps, {}> {
     } = this.props;
 
     return (
-      <div>
-        <h2>User Name ==  {escape(userDisplayName)}</h2>
-          
-          <TotalConsolidated></TotalConsolidated>
-        </div>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App userDisplayName={userDisplayName}></App>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
