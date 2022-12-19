@@ -10,12 +10,15 @@ interface IAppProps {
 }
 const App: FunctionComponent<IAppProps> = (props) => {
     const {userDisplayName} = props;
-    const appState = useSelector((state)=>state)
-    console.log('from app',appState);
+    const chapter = useSelector((state:any) => state.application.chapter);
+    const year = useSelector((state:any)=>state.application.year);
+    const isLocal = useSelector((state:any)=>state.application.isLocal);
+    const page = useSelector((state:any)=>state.application.page);
+    console.log('from app',chapter.chapterName,year.yearName,isLocal);
   return (
     <div>
       <h2>User Name == {escape(userDisplayName)}</h2>
-      <Navbar year={'2022'}></Navbar>
+      <Navbar chapter={chapter} year={year} currentPage={page}></Navbar>
       <TotalConsolidated></TotalConsolidated>
     </div>
   );

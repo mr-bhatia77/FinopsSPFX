@@ -3,13 +3,14 @@ import {FunctionComponent, useEffect, useState } from 'react';
 import { Link} from 'react-router-dom';
 // import { chapterList, yearList, nationList } from "./MenuItems";
 // import { useSelector, useDispatch } from 'react-redux';
+import {IChapter} from '../common/Iprops';
 import './Navbar.css';
 
 
 interface INavbarProps {
-    // chapter:string, 
+    chapter:IChapter, 
     year:string
-    // currentPage:string
+    currentPage?:string
 }
   
 
@@ -42,7 +43,7 @@ const Navbar:FunctionComponent<INavbarProps> = (props) => {
 //     'budgetSpread': false
 //   }
 
-//   const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
 //   const [dropdown3, setDropdown3] = useState(false)
 //   const [dropdown, setDropdown] = useState(false)
 //   const [dropdown2, setDropdown2] = useState(false)
@@ -53,6 +54,7 @@ const Navbar:FunctionComponent<INavbarProps> = (props) => {
 //   const [nationDataList, setNationDataList] = useState(nationList)
 
   useEffect(() => {
+    setClick(false)
     // if (navbar1State.Templates) {
     //   setNavbar2State({ ...initialNavbar2State, [currentPage]: true })
     // }
@@ -120,7 +122,7 @@ const Navbar:FunctionComponent<INavbarProps> = (props) => {
     {/* <div className='menu-icon' onClick={handleClick}>
     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
   </div> */}
-    <ul className={false ? 'nav-menu active' : 'nav-menu'}>
+    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
       <li className='nav-item'>
         <Link to='/' className={navbar1State.Home ? 'nav-links-active' : 'nav-links'} onClick={() => setNavbar1State({ ...initialNavbar1State, 'Home': true })}>
           Home
