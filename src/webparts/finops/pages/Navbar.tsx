@@ -12,8 +12,9 @@ import './Navbar.css';
 
 interface INavbarProps {
     chapter:IChapterInfo, 
-    year:IYear
-    currentPage?:string
+    year:IYear,
+    currentPage?:string,
+    pathName: string
 }
   
 interface Nav2State {
@@ -22,7 +23,7 @@ interface Nav2State {
 
 const Navbar:FunctionComponent<INavbarProps> = (props) => {
 
-  const {chapter,year} = props;
+  const {chapter,year,pathName} = props;
   const {currentPage} = props;
   // const dispatch = useDispatch();
   // const location = useLocation();
@@ -127,7 +128,7 @@ const Navbar:FunctionComponent<INavbarProps> = (props) => {
 
   return (
     <><nav className='navbar'>
-    <Link to='/' className='navbar-logo'>
+    <Link to={`${pathName}/home`} className='navbar-logo'>
       {/* Crohn Colitis Foundation */}
       <img alt="Crohn Colitis Foundation" src="https://www.pathassist.org/resource/resmgr/2019_conference/website_images/ccf_logo_h_pos_rgb.png"
         width="200" height="60" style={{ backgroundColor: 'white', marginTop: '5px' }} />
@@ -137,7 +138,7 @@ const Navbar:FunctionComponent<INavbarProps> = (props) => {
   </div> */}
     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
       <li className='nav-item'>
-        <Link to='/' className={navbar1State.Home ? 'nav-links-active' : 'nav-links'} onClick={() => setNavbar1State({ ...initialNavbar1State, 'Home': true })}>
+        <Link to={`${pathName}/home`} className={navbar1State.Home ? 'nav-links-active' : 'nav-links'} onClick={() => setNavbar1State({ ...initialNavbar1State, 'Home': true })}>
           Home
         </Link>
       </li>
@@ -193,7 +194,7 @@ const Navbar:FunctionComponent<INavbarProps> = (props) => {
       <li
         className='nav-item'
       > 
-        <Link to={`/chapter/totalConsolidated?chapterId=1`} className={navbar1State['Total Consolidated'] ? 'nav-links-active' : 'nav-links'} onClick={() => setNavbar1State({ ...initialNavbar1State, 'Total Consolidated': true })}>
+        <Link to={`${pathName}/totalConsolidated?chapterId=1`} className={navbar1State['Total Consolidated'] ? 'nav-links-active' : 'nav-links'} onClick={() => setNavbar1State({ ...initialNavbar1State, 'Total Consolidated': true })}>
           Master Consolidated
         </Link><br />
       </li>

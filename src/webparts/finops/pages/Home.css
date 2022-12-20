@@ -1,0 +1,5 @@
+div.foo {
+    background: yellow;
+    display: table-cell;
+    padding: .5em;
+  }
